@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GymTrainer.MainPage"
+             Title="{Binding Title}">
+
+    <Grid Padding="12"
+          RowDefinitions="AUTO,AUTO,*,AUTO">
+
+        <HorizontalStackLayout>
+            <Label FontFamily="OpenSans-Bold" FontSize="24" Text="Gym Trainer" />
+
+        </HorizontalStackLayout>
+
+        <Label FontFamily="OpenSans-LightItalic" 
+               FontSize="16" 
+               Text="Choose a workout schedule for yourself." 
+               TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray100}}" 
+               Grid.Row="1" />
+
+        <CollectionView ItemsSource="{Binding MyDays}"
+                        Grid.Row="2"
+                        Margin="0,14"
+                        >
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical"
+                                   ItemSpacing="16"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+       
+
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Color x:Key="Primary">Blue</Color>
+    <Color x:Key="Rose300Accent">Violet</Color>
+
+    <Color x:Key="LightBackground">#F3F6F4</Color>
+    <Color x:Key="DarkBackground">#212121</Color>
+
+    <Style TargetType="Shell" ApplyToDerivedTypes="True">
+        <Setter Property="Shell.BackgroundColor" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource Gray950}}" />
+    </Style>
+
+    <Style TargetType="Page" ApplyToDerivedTypes="True">
+        <Setter Property="BackgroundColor"
+                Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
+    </Style>
+
+    <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}" />
+        <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+        <Setter Property="BarTextColor" Value="White" />
+    </Style>
+
+    <Style x:Key="ButtonOutline" TargetType="Button">
+        <Setter Property="FontFamily" Value="OpenSansSemibold"/>
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"/>
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+        <Setter Property="BorderColor" Value="{StaticResource Primary}"/>
+        <Setter Property="BorderWidth" Value="2"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+    
+    <Style x:Key="CardView" TargetType="Frame">
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Shadow" Value="2"/>
+        <Setter Property="Background" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Black}}"/>
+        <Setter Property="CornerRadius" Value="3"/>
+        <Setter Property="IsClippedToBounds" Value="True"/>
+    </Style>
+
+</ResourceDictionary>

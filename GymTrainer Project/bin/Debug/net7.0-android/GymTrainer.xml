@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GymTrainer</name>
+    </assembly>
+    <members>
+        <member name="T:GymTrainer.Services.MyDayService">
+            <summary>
+            This service will handle HTTP requests to retrieve data from the cloud
+            </summary>
+        </member>
+        <member name="T:GymTrainer.ViewModels.BaseViewModel">
+            <summary>
+            Common view model for the app pages
+            </summary>
+        </member>
+        <member name="P:GymTrainer.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:GymTrainer.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:GymTrainer.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:GymTrainer.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="P:GymTrainer.ViewModels.MyDayDetailsViewModel.Day">
+            <inheritdoc cref="F:GymTrainer.ViewModels.MyDayDetailsViewModel.day"/>
+        </member>
+        <member name="F:GymTrainer.ViewModels.MyDaysViewModel.goToDetailsCommand">
+            <summary>The backing field for <see cref="P:GymTrainer.ViewModels.MyDaysViewModel.GoToDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:GymTrainer.ViewModels.MyDaysViewModel.GoToDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:GymTrainer.ViewModels.MyDaysViewModel.GoToDetailsAsync(GymTrainer.Models.Day)"/>.</summary>
+        </member>
+        <member name="F:GymTrainer.ViewModels.MyDaysViewModel.getMyDaysCommand">
+            <summary>The backing field for <see cref="P:GymTrainer.ViewModels.MyDaysViewModel.GetMyDaysCommand"/>.</summary>
+        </member>
+        <member name="P:GymTrainer.ViewModels.MyDaysViewModel.GetMyDaysCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:GymTrainer.ViewModels.MyDaysViewModel.GetMyDaysAsync"/>.</summary>
+        </member>
+    </members>
+</doc>

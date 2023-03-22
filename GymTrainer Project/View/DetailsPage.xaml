@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+
+             Title="{Binding Day.Name}">
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid ColumnDefinitions="*, AUTO, *"
+                  RowDefinitions="160, AUTO">
+                <BoxView Grid.ColumnSpan="3"
+                         Color="{StaticResource Blue200Accent}"
+                         HeightRequest="160"
+                         HorizontalOptions="FillAndExpand" />
+
+                <Frame Grid.RowSpan="2"
+                       Grid.Column="1"
+                       HeightRequest="160"
+                       WidthRequest="160"
+                       CornerRadius="80"
+                       HorizontalOptions="Center"
+                       IsClippedToBounds="True"
+                       Padding="0"
+                       Margin="0, 80, 0, 0">
+                    <Image Aspect="AspectFill"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source="{Binding Day.Image}"/>
+                </Frame>
+            </Grid>
+
+            <VerticalStackLayout Padding="10,20" 
+                                 Spacing="10">
+
+                <Label Text="{Binding Day.Name}"
+                       FontSize="24"
+                       FontFamily="OpenSans-Bold"
+                       HorizontalTextAlignment="Center"/>
+                
+                <Label Text="{Binding Day.Description}"
+                       FontSize="18"/>
+
+                <FlexLayout BindableLayout.ItemsSource="{Binding Day.Activities}"
+                                        Grid.Row="1"
+                                        Wrap="Wrap"
+                                        AlignItems="Start">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="8"
+                                               Margin="1"
+                                               BorderColor="Transparent"
+                                               BackgroundColor="{StaticResource Blue100Accent}">
+                                <Label Text="{Binding .}"
+                                    TextColor="{StaticResource Gray900}" />
+                            </Frame>
+
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+</ContentPage>

@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = GymTrainer
+build_property.ProjectDir = C:\Users\Gurvinder Nagra\source\repos\GymTrainer - Copy\
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/Resources/Styles/CustomStyles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.Resources.Styles.CustomStyles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\CustomStyles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\CustomStyles.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Gurvinder Nagra/source/repos/GymTrainer - Copy/View/DetailsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = GymTrainer.View.DetailsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\DetailsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\DetailsPage.xaml
