@@ -13,7 +13,7 @@
         </HorizontalStackLayout>
 
         <Label FontFamily="OpenSans-LightItalic" 
-               FontSize="16" 
+               FontSize="18" 
                Text="Choose a workout schedule for yourself." 
                TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray100}}" 
                Grid.Row="1" />
@@ -24,7 +24,7 @@
                         >
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="16"/>
+                                   ItemSpacing="18"/>
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>

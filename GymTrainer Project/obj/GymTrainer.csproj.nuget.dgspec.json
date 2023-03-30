@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\GymTrainer.csproj": {}
+    "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\GymTrainer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\GymTrainer.csproj": {
+    "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\GymTrainer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\GymTrainer.csproj",
+        "projectUniqueName": "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\GymTrainer.csproj",
         "projectName": "GymTrainer",
-        "projectPath": "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\GymTrainer.csproj",
+        "projectPath": "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\GymTrainer.csproj",
         "packagesPath": "C:\\Users\\Gurvinder Nagra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\obj\\",
+        "outputPath": "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

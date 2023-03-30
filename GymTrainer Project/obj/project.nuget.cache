@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i2kv47AVa26Q/UAvSNQVvVR+zrf/mWegiCUthrFIYltYJEJ6dKj4UlCe+eMq9LnHHdcjPT5Zi5egQgWoQWbWgQ==",
+  "dgSpecHash": "8gqzHot3x9p3CQ4lYLxGRvdZ4ERMFXKPXK7hmmRMOfVP7eZw8P8z+VcP0BT5BgxHY3uX54cHPgoyQ4elHGRCjg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gurvinder Nagra\\source\\repos\\GymTrainer - Copy\\GymTrainer.csproj",
+  "projectFilePath": "C:\\Users\\Gurvinder Nagra\\Documents\\GitHub\\6002CW2\\GymTrainer Project\\GymTrainer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gurvinder Nagra\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\Gurvinder Nagra\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
