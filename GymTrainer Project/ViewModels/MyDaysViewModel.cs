@@ -1,6 +1,6 @@
 ﻿using GymTrainer.Models;
 using GymTrainer.Services;
-using static Android.Telephony.CarrierConfigManager;
+using static Microsoft.Maui.Controls.PlatformConfiguration.Android.Telephony.CarrierConfigManager;
 
 namespace GymTrainer.ViewModels
 {
