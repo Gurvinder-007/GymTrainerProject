@@ -26,7 +26,7 @@ namespace GymTrainer.Services
             if (days?.Count > 0)
                 return days;
 
-            var url = "https://gist.githubusercontent.com/Gurvinder-007/ebd06f6ac2d9aa8ec1bef84cfae64b42/raw/d85ad7c46dc2baf0514dae6e5a21688b61932190/Gym.json";
+            var url = "https://gist.githubusercontent.com/Gurvinder-007/f7e653666cbfe64768d6bdca4f999134/raw/214ebc55a0abecccde6799957fe7782164d9fd54/Gym.json";
 
             var response = await httpClient.GetAsync(url);
 
@@ -39,3 +39,4 @@ namespace GymTrainer.Services
         }
     }
 }
+

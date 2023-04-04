@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:GymTrainer.ViewModels"
+             xmlns:models="clr-namespace:GymTrainer.Models"
+             x:DataType="viewmodels:MyDaysViewModel"
              x:Class="GymTrainer.MainPage"
              Title="{Binding Title}">
 
@@ -13,21 +16,98 @@
         </HorizontalStackLayout>
 
         <Label FontFamily="OpenSans-LightItalic" 
-               FontSize="18" 
+               FontSize="16" 
                Text="Choose a workout schedule for yourself." 
                TextColor="{AppThemeBinding Light={StaticResource Gray600}, Dark={StaticResource Gray100}}" 
                Grid.Row="1" />
-
+     
+        
         <CollectionView ItemsSource="{Binding MyDays}"
                         Grid.Row="2"
                         Margin="0,14"
                         >
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"
-                                   ItemSpacing="18"/>
+                                   ItemSpacing="16"/>
             </CollectionView.ItemsLayout>
 
             <CollectionView.ItemTemplate>
-       
+                <DataTemplate x:DataType="models:Day">
+                    <Frame HeightRequest="275"  
+                           Padding="0"
+                           Style="{StaticResource CardView}">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                  Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:MyDaysViewModel}}, Path=GoToDetailsCommand}" />
 
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="{Binding Image}" 
+                                   Aspect="AspectFill" />
+
+                            <Grid Grid.Column="1"
+                                  Padding="16"
+                                  RowDefinitions="AUTO,AUTO,*">
+
+                                <Label Text="{Binding Name}" 
+                                   FontSize="20"
+                                   FontFamily="OpenSans-SemiBold"/>
+
+
+                                <FlexLayout BindableLayout.ItemsSource="{Binding Activities}"
+                                        Grid.Row="1"
+                                        Wrap="Wrap"
+                                        AlignItems="Start">
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Frame Padding="8"
+                                               Margin="1"
+                                               BorderColor="Transparent"
+                                               BackgroundColor="{StaticResource Blue100Accent}">
+                                                <Label Text="{Binding .}"
+                                                       TextColor="{StaticResource Gray900}" />
+                                            </Frame>
+
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </FlexLayout>
+
+                                <Label Text="{Binding Description}" 
+                                   TextColor="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource Gray100}}"
+                                   Padding="0,20,0,0"
+                                   Grid.Row="2" />
+                            </Grid>
+
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Start Timer"
+               Command="{Binding TimerCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Row="3"
+                Style="{StaticResource ButtonOutline}" />
+        
+        <Button Text="Get Recommendations" 
+                Command="{Binding GetMyDaysCommand}"
+                IsEnabled="{Binding IsNotBusy}"
+                Grid.Row="4"
+                Style="{StaticResource ButtonOutline}"/>
+
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"/>
+
+    </Grid>
 </ContentPage>
