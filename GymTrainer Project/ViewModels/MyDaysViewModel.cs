@@ -1,12 +1,15 @@
-﻿using GymTrainer.Models;
+﻿using System.Windows.Input;
+using GymTrainer.Models;
 using GymTrainer.Services;
-using static Microsoft.Maui.Controls.PlatformConfiguration.Android.Telephony.CarrierConfigManager;
+using static Android.Telephony.CarrierConfigManager;
 
 namespace GymTrainer.ViewModels
 {
     public partial class MyDaysViewModel : BaseViewModel
     {
         MyDayService myDayService;
+
+        public ICommand TimerCommand { get; }
 
         // ObservableCollection is used since it has built-in support to raise CollectionChanged
         // OnPropertyChanged does not need to be called
@@ -17,6 +20,44 @@ namespace GymTrainer.ViewModels
         {
             Title = "Workout Scheduler";
             this.myDayService = myDayService;
+
+            TimerCommand = new Command(async () =>
+            {
+                // show a timer dialog to the user
+                var duration = await Shell.Current.DisplayPromptAsync("Gym Timer", "Enter exercise duration (in seconds):");
+
+                if (!string.IsNullOrEmpty(duration) && int.TryParse(duration, out int seconds))
+                {
+                    // start the timer
+                    var remaining = seconds;
+
+                    while (remaining > 0)
+                    {
+                        // update the timer dialog with the remaining time
+                        var result = await Shell.Current.DisplayAlert("Gym Timer", $"Time remaining: {remaining} seconds", "Pause", "Cancel");
+
+                        if (result)
+                        {
+                            // user clicked "Pause"
+                            result = await Shell.Current.DisplayAlert("Gym Timer", "Timer paused. Continue?", "Resume", "Cancel");
+
+                            if (!result)
+                            {
+                                // user clicked "Cancel"
+                                break;
+                            }
+                        }
+
+                        // decrement the remaining time by 1 second
+                        remaining--;
+                    }
+
+                    // timer finished
+                    await Shell.Current.DisplayAlert("Gym Timer", "Exercise completed!", "OK");
+                }
+            });
+
+
         }
 
         // Generates GoToDetailsCommand automatically
@@ -71,3 +112,4 @@ namespace GymTrainer.ViewModels
         }
     }
 }
+
