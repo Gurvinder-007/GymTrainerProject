@@ -1,5 +1,5 @@
 namespace GymTrainer.Views;
-
+using ViewModels;
 public partial class DetailsPage : ContentPage
 {
 	public DetailsPage(MyDayDetailsViewModel viewModel)
